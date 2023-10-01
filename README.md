@@ -62,7 +62,8 @@ project-root
 |-- package.json
 |-- README.md
 
-## Contributing
+## Folder Structure
+
 If you'd like to contribute to this project, feel free to submit a pull request.
 
 ## License
