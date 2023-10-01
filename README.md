@@ -8,7 +8,7 @@ This Node.js and Express.js application allows you to upload video chunks from t
 
     ```bash
     git clone https://github.com/ayhameed/video-streaming-endpoint.git
-    cd your-repo
+    cd repo
     ```
 
 2. **Install Dependencies**
@@ -23,7 +23,7 @@ This Node.js and Express.js application allows you to upload video chunks from t
 
     ```env
     PORT=3000
-    BASE_URL=http://localhost:3000
+    BASE_URL=http://localhost:3001
     ```
 
     Adjust the `PORT` value if necessary.
@@ -34,7 +34,7 @@ This Node.js and Express.js application allows you to upload video chunks from t
     npm start
     ```
 
-    The application will start, and you can access it at `http://localhost:3000`.
+    The application will start, and you can access it at `http://localhost:3001`.
 
 ## Usage
 
