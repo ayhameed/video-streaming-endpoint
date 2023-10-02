@@ -28,6 +28,7 @@ app.get('/', (req, res) => {
 });
 
 // Set up a route for the videos page to serve videos.ejs
+// Set up a route for the videos page to serve videos.ejs
 app.get('/videos', async (req, res) => {
   try {
     const files = await fs.readdir(uploadDir);
@@ -43,10 +44,22 @@ app.get('/videos', async (req, res) => {
       })
     );
 
-    res.render('videos', { videos });
+    // Check if the request accepts JSON
+    if (req.accepts('json')) {
+      res.json({ videos });
+    } else {
+      // Render the EJS template with the videos
+      res.render('videos', { videos });
+    }
   } catch (error) {
     console.error(error);
-    res.status(500).send('Error retrieving videos.');
+
+    // Check if the request accepts JSON
+    if (req.accepts('json')) {
+      res.status(500).json({ success: false, message: 'Error retrieving videos.' });
+    } else {
+      res.status(500).send('Error retrieving videos.');
+    }
   }
 });
 
