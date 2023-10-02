@@ -1,0 +1,52 @@
+<!-- views/videos.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Videos</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .video-container {
+      margin: 20px;
+      text-align: center;
+    }
+
+    video {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <% videos.forEach((video) => { %>
+    <div class="video-container">
+      <a href="<%= video.url %>" target="_blank">
+        <video controls>
+          <source src="<%= video.url %>" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p><%= video.name %></p>
+      </a>
+    </div>
+  <% }); %>
+
+</body>
+</html>
