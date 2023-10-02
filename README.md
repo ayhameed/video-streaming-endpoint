@@ -34,10 +34,11 @@ This Node.js and Express.js application allows you to upload video chunks from t
 
     ```env
     PORT=3000
-    BASE_URL=http://localhost:3001
+    BASE_URL=http://localhost:3000
     ```
 
     Adjust the `PORT` value if necessary.
+    Change the `BASE_URL` value if needed.
 
 4. **Run the Application**
 
@@ -45,7 +46,7 @@ This Node.js and Express.js application allows you to upload video chunks from t
     npm start
     ```
 
-    The application will start, and you can access it at `http://localhost:3001`.
+    The application will start, and you can access it at `http://localhost:3000`.
 
 ## Dependencies 
 - Node.js
